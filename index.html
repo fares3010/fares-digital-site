@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fares Ashraf · Marketing Portfolio</title>
+<meta name="description" content="Fares Ashraf — Senior Digital Marketing Specialist. Performance marketing, lead generation and content for brands in Egypt, the Gulf and Europe.">
+<meta name="author" content="Fares Ashraf">
+<link rel="canonical" href="https://fares.digital/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fares.digital/">
+<meta property="og:title" content="Fares Ashraf · Senior Digital Marketing Specialist">
+<meta property="og:description" content="Performance marketing, lead generation and content for brands across Egypt, the Gulf and Europe. Case studies, sourced results and showreel.">
+<meta property="og:image" content="https://fares.digital/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F4F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1215" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Cairo:wght@500;700;800&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+</style>
+<style>
+/* Layout: an ad-manager ledger — every result is a KPI tile with its source line; case studies are campaign rows you open. */
+:root{
+  --paper:#F3F4F1; --card:#FFFFFF; --ink:#13171D; --muted:#5A626C; --line:#DCDFD9;
+  --accent:#FF5A1F; --accent-ink:#B63B0D; --on-accent:#FFFFFF; --good:#1F8A5B; --chip:#E9ECE6;
+  --display:"Bricolage Grotesque","Cairo",ui-sans-serif,system-ui,sans-serif;
+  --body:"Instrument Sans","Cairo",ui-sans-serif,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:14px; --max:1180px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0F1215; --card:#161A1F; --ink:#ECEDE9; --muted:#9AA2AB; --line:#262B32;
+  --accent:#FF6A33; --accent-ink:#FF8D61; --on-accent:#140A05; --good:#4CC28E; --chip:#1E232A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1215; --card:#161A1F; --ink:#ECEDE9; --muted:#9AA2AB; --line:#262B32;
+  --accent:#FF6A33; --accent-ink:#FF8D61; --on-accent:#140A05; --good:#4CC28E; --chip:#1E232A; color-scheme:dark}
+html[lang="ar"]{--display:"Cairo",ui-sans-serif,system-ui,sans-serif;--body:"Cairo",ui-sans-serif,system-ui,sans-serif}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0;letter-spacing:-.02em}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{letter-spacing:0;line-height:1.25}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+html[lang="ar"] .eyebrow{font-family:var(--body);letter-spacing:0;font-size:14px;font-weight:700}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in oklab,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;padding-block:12px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600}
+.mark b{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:800;font-size:15px}
+nav{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:15px;padding:6px 10px;border-radius:8px;color:var(--muted)}
+nav a:hover{color:var(--ink);background:var(--chip)}
+.lang{border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 14px var(--body);padding:7px 12px;border-radius:999px;cursor:pointer}
+.lang:hover{border-color:var(--ink)}
+@media (max-width:760px){nav{display:none}.lang{margin-inline-start:auto}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end;padding-block:56px 40px}
+.hero h1{font-size:clamp(56px,9vw,124px);font-weight:800}
+.hero h1 span{color:var(--accent)}
+.role{font-size:clamp(19px,2.2vw,24px);font-weight:600;margin-top:14px}
+.thesis{font-size:clamp(18px,1.8vw,21px);color:var(--muted);max-width:34ch;margin-top:14px}
+.markets{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{background:var(--chip);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{transform:translateY(-1px)}
+.portrait{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-width:100%;background:var(--chip)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .tag{position:absolute;inset-inline-start:14px;bottom:14px;background:var(--card);color:var(--ink);border-radius:12px;padding:10px 14px;font-size:14px;line-height:1.3;box-shadow:0 6px 24px rgba(0,0,0,.12)}
+.portrait .tag strong{display:block;font-family:var(--display);font-size:26px}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.facts div{min-width:0}
+.facts strong{display:block;font-family:var(--display);font-size:34px;font-weight:800;line-height:1}
+.facts span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:28px;padding-block:32px}.portrait{max-width:420px}}
+
+/* sections */
+section{padding-block:64px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(34px,4.6vw,56px);font-weight:800}
+.sec-head p{color:var(--muted);max-width:48ch}
+
+/* ledger */
+.ledger{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.kpi{background:var(--card);padding:22px 20px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .v{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.2vw,40px);line-height:1;font-variant-numeric:tabular-nums}
+.kpi .v em{font-style:normal;color:var(--accent)}
+.kpi .l{font-weight:600;line-height:1.35}
+.kpi .s{margin-top:auto;padding-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.45}
+html[lang="ar"] .kpi .s{font-family:var(--body);font-size:12.5px}
+.kpi .up{color:var(--good);font-weight:600}
+@media (max-width:980px){.ledger{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.ledger{grid-template-columns:1fr}}
+
+/* work */
+.case{border-top:1px solid var(--line)}
+.case:last-child{border-bottom:1px solid var(--line)}
+.case summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:56px minmax(0,1.3fr) minmax(0,1fr) auto;gap:20px;align-items:center;padding-block:26px}
+.case summary::-webkit-details-marker{display:none}
+.case .no{font-family:var(--mono);color:var(--muted);font-size:14px}
+.case h3{font-size:clamp(26px,3vw,38px);font-weight:800}
+.case .meta{color:var(--muted);font-size:15px;line-height:1.45}
+.case .meta b{color:var(--ink);font-weight:600;display:block}
+.case .open{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:22px;transition:transform .25s,background .2s}
+.case[open] .open{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.case summary:hover .open{border-color:var(--ink)}
+.case .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:10px;vertical-align:middle}
+@media (max-width:760px){.case summary{grid-template-columns:minmax(0,1fr) auto;gap:8px 14px}.case .no{display:none}.case .meta{grid-column:1/2}}
+.body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;padding-bottom:40px}
+.body h4{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
+html[lang="ar"] .body h4{font-family:var(--body);letter-spacing:0;font-size:14px;font-weight:700}
+.body h4:first-child{margin-top:0}
+.body ul{margin:0;padding-inline-start:20px;display:grid;gap:6px}
+.body li::marker{color:var(--accent)}
+.res{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.res>span{background:var(--chip);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.res strong{font-family:var(--display);font-weight:800;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+.res strong+span{font-size:14px;line-height:1.35;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
+.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery figure.wide{grid-column:1/-1}
+.gallery img{display:block;width:100%;height:auto}
+.gallery figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
+html[lang="ar"] .gallery figcaption{font-family:var(--body);font-size:12.5px}
+.reelbtn{margin-top:22px}
+@media (max-width:860px){.body{grid-template-columns:1fr;gap:24px}}
+
+/* reels */
+.reels{display:grid;grid-template-columns:1.1fr repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.phone{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:8px;min-width:0}
+.phone video{width:100%;aspect-ratio:9/16;max-width:100%;border-radius:15px;background:#000;display:block}
+.phone p{font-weight:600;font-size:15px;padding:10px 6px 4px;line-height:1.3}
+.phone small{display:block;color:var(--muted);font-weight:500;font-size:13px}
+.phone.feature{grid-row:span 2;border-color:var(--accent)}
+.phone.feature p{font-family:var(--display);font-size:22px}
+@media (max-width:980px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.phone.feature{grid-column:1/-1;grid-row:auto;max-width:440px}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 36px}
+.skill{min-width:0}
+.skill h3{font-size:22px;font-weight:800;margin-bottom:8px}
+.skill p{color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.tools .chip{font-family:var(--mono);font-size:13px}
+@media (max-width:860px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
+
+/* experience */
+.xp{display:grid;gap:0;border-top:1px solid var(--line)}
+.xp div{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,.6fr);gap:16px;padding-block:16px;border-bottom:1px solid var(--line);align-items:baseline}
+.xp b{font-weight:600}
+.xp span{color:var(--muted)}
+.xp .when{font-family:var(--mono);font-size:13.5px;text-align:end;color:var(--muted)}
+@media (max-width:640px){.xp div{grid-template-columns:1fr;gap:2px}.xp .when{text-align:start}}
+
+/* contact */
+.contact{background:var(--accent);color:var(--on-accent);border-radius:28px;padding-block:56px;padding-inline:clamp(24px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
+.contact h2{font-size:clamp(40px,6vw,84px);font-weight:800}
+.contact p{font-size:19px;margin-top:14px;max-width:38ch}
+.contact .card{background:var(--paper);color:var(--ink);border-radius:18px;padding:22px;display:grid;gap:10px}
+.contact .card .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.contact .card .k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.contact .card .val{font-family:var(--display);font-size:24px;font-weight:800;word-break:break-all}
+.contact .card .val.sm{font-size:20px}
+.contact .card .k:not(:first-child){margin-top:6px}
+.wa{margin-top:8px;display:block;text-align:center;text-decoration:none;font-weight:700;padding:12px 16px;border-radius:999px;background:#1F8A5B;color:#FFFFFF}
+.wa:hover{filter:brightness(1.08)}
+.copy{border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:600 14px var(--body);padding:7px 14px;border-radius:999px;cursor:pointer}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+html[lang="ar"] .kpi .v,html[lang="ar"] .res strong,html[lang="ar"] .facts strong,html[lang="ar"] .portrait .tag strong{direction:ltr;text-align:right;unicode-bidi:isolate}
+footer{padding-block:28px 40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top"><b>FA</b><span data-i18n="brand">Fares Ashraf</span></a>
+    <nav aria-label="Sections">
+      <a href="#results" data-i18n="nav1">Results</a>
+      <a href="#work" data-i18n="nav2">Work</a>
+      <a href="#reels" data-i18n="nav3">Reels</a>
+      <a href="#skills" data-i18n="nav4">Skills</a>
+      <a href="#contact" data-i18n="nav5">Contact</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow" data-i18n="eyebrow">Senior Digital Marketing Specialist · Cairo</p>
+      <h1 data-i18n="name">Fares <span>Ashraf</span></h1>
+      <p class="role" data-i18n="role">Performance marketing, lead generation and content for brands across Egypt, the Gulf and Europe.</p>
+      <p class="thesis" data-i18n="thesis">I turn ad spend into conversations with real buyers, and I measure every step with an engineer's discipline.</p>
+      <div class="markets" aria-label="Markets">
+        <span class="chip" data-i18n="m1">Egypt</span><span class="chip" data-i18n="m2">Saudi Arabia</span><span class="chip" data-i18n="m3">Qatar</span>
+        <span class="chip" data-i18n="m4">UAE</span><span class="chip" data-i18n="m5">Turkey</span><span class="chip" data-i18n="m6">Germany (remote)</span>
+      </div>
+      <div class="ctas">
+        <a class="btn primary" href="#work" data-i18n="cta1">See the case studies</a>
+        <a class="btn" href="#reels" data-i18n="cta2">Watch the showreel</a>
+      </div>
+      <div class="facts">
+        <div><strong>6</strong><span data-i18n="f1">years in digital marketing</span></div>
+        <div><strong>15+</strong><span data-i18n="f2">brands and agencies</span></div>
+        <div><strong>4</strong><span data-i18n="f3">ad platforms: Meta, Google, Snapchat, TikTok</span></div>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/img/portrait.jpg" alt="Portrait of Fares Ashraf" width="640" height="800">
+      <div class="tag"><strong>+200%</strong><span data-i18n="tag">qualified leads at Sereno Egypt</span></div>
+    </div>
+  </div>
+
+  <section id="results">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="r_h">Numbers, with their sources</h2>
+        <p data-i18n="r_p">Every figure below comes from a campaign I ran. The line under each one says where it was reported.</p>
+      </div>
+      <div class="ledger">
+        <div class="kpi"><div class="v"><em>+</em>200%</div><div class="l" data-i18n="k1">more qualified leads</div><div class="s" data-i18n="k1s">Sereno Egypt · company reporting</div></div>
+        <div class="kpi"><div class="v">12M <em>→</em> 50M</div><div class="l" data-i18n="k2">total sales, EGP</div><div class="s" data-i18n="k2s">Sereno Egypt · company reporting</div></div>
+        <div class="kpi"><div class="v">2,006,991</div><div class="l" data-i18n="k3">Instagram views · 957,228 reached <span class="up">↑115.3%</span></div><div class="s" data-i18n="k3s">Sereno Egypt · Meta Business Suite · Sep 2024 – Aug 2025</div></div>
+        <div class="kpi"><div class="v">127,192</div><div class="l" data-i18n="k4">link clicks at EGP 2.35 each</div><div class="s" data-i18n="k4s">Sereno Egypt · Meta Ads Manager · Oct 2024 – Aug 2025</div></div>
+        <div class="kpi"><div class="v">34,535</div><div class="l" data-i18n="k5">post engagements for $59.05 in total</div><div class="s" data-i18n="k5s">Omega Clinic via Palmenburg · Meta Ads Manager</div></div>
+        <div class="kpi"><div class="v">7,283</div><div class="l" data-i18n="k6">Instagram profile visits <span class="up">↑335.8%</span> vs the previous 11 days</div><div class="s" data-i18n="k6s">Prolight Media client · Meta Ads Manager · 28 Oct – 7 Nov 2024</div></div>
+        <div class="kpi"><div class="v">42</div><div class="l" data-i18n="k7">Facebook leads in 6 days at $7.94 each</div><div class="s" data-i18n="k7s">Pure Care Clinic via Palmenburg · French campaign · 1–6 May 2023</div></div>
+        <div class="kpi"><div class="v">69</div><div class="l" data-i18n="k8">leads from 77,223 paid impressions</div><div class="s" data-i18n="k8s">Prolight Media client · Snapchat Ads · 24 Dec 2024 – 9 Jan 2025</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="w_h">Case studies</h2>
+        <p data-i18n="w_p">Five companies, from a furniture maker in Cairo to a German agency. Open one to see the problem, what I did, and the proof.</p>
+      </div>
+
+      <details class="case" open>
+        <summary><span class="no">01</span><h3><span class="dot" style="background:#FF5A1F"></span>Sereno Egypt</h3><div class="meta"><b data-i18n="c1r">Digital Marketing Manager</b><span data-i18n="c1m">Egypt · outdoor furniture · 2024–2026</span></div><span class="open" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <div>
+            <h4 data-i18n="lbl_ch">The challenge</h4>
+            <p data-i18n="c1ch">Sereno sells to homeowners and to hotels, resorts and distributors. Each buys differently, and cheap inquiries were not turning into real orders.</p>
+            <h4 data-i18n="lbl_do">What I did</h4>
+            <ul>
+              <li data-i18n="c1d1">Wrote separate messages and customer journeys for home buyers and hospitality buyers.</li>
+              <li data-i18n="c1d2">Moved budget to the sources that converted and paused ad sets that brought cheap, low-quality inquiries.</li>
+              <li data-i18n="c1d3">Ran retargeting and audiences built from customer data, and A/B tested messages and designs.</li>
+              <li data-i18n="c1d4">Improved the website journey and launched Google Shopping campaigns.</li>
+              <li data-i18n="c1d5">Built AskQuo, an AI chat assistant trained on Sereno's own content, as an MVP.</li>
+            </ul>
+            <h4 data-i18n="lbl_res">Results</h4>
+            <div class="res">
+              <span><strong>+200%</strong><span data-i18n="c1x1">qualified leads</span></span>
+              <span><strong>12M → 50M</strong><span data-i18n="c1x2">sales, EGP</span></span>
+              <span><strong>6K → 24K</strong><span data-i18n="c1x3">Instagram followers</span></span>
+              <span><strong>300</strong><span data-i18n="c1x4">chairs in one bulk request</span></span>
+            </div>
+            <a class="btn reelbtn" href="#reel-sereno" data-i18n="watch">Watch the case-study reel</a>
+          </div>
+          <div class="gallery">
+            <figure class="wide"><img loading="lazy" src="assets/img/sereno-ig.jpg" alt="Meta Business Suite chart: 2,006,991 views and 957,228 reach" width="891" height="309"><figcaption data-i18n="g_s1">Meta Business Suite · Instagram · Sep 2024 – Aug 2025</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/sereno-traffic.jpg" alt="Meta Ads Manager: 127,192 link clicks" width="615" height="372"><figcaption data-i18n="g_s2">Meta Ads Manager · Traffic</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/sereno-google.jpg" alt="Google Ads Shopping campaign: 1,938 clicks, 281,769 impressions" width="900" height="228"><figcaption data-i18n="g_s3">Google Ads · Shopping · Feb – Mar 2026</figcaption></figure>
+          </div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary><span class="no">02</span><h3><span class="dot" style="background:#E8262F"></span>Aseer Time</h3><div class="meta"><b data-i18n="c2r">Regional Social Media Marketing Specialist</b><span data-i18n="c2m">Saudi Arabia · Qatar · food &amp; drinks</span></div><span class="open" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <div>
+            <h4 data-i18n="lbl_ch">The challenge</h4>
+            <p data-i18n="c2ch">One juice and dessert brand, several markets. Each audience needed to hear the brand in its own dialect and around its own occasions.</p>
+            <h4 data-i18n="lbl_do">What I did</h4>
+            <ul>
+              <li data-i18n="c2d1">Wrote captions in Saudi, Qatari and wider Gulf dialects, tied to local life and occasions.</li>
+              <li data-i18n="c2d2">Built a content plan of 14 ideas over 6 weeks, with a paid budget of at least $20 a day per account and A/B tests on every piece.</li>
+              <li data-i18n="c2d3">Planned the Flamingo range launch in Saudi Arabia and Qatar.</li>
+              <li data-i18n="c2d4">Ran Ramadan, Eid and national-day campaigns on Meta and Snapchat, plus influencer collaborations.</li>
+              <li data-i18n="c2d5">Designed branch sales contests that reward growth on a single product.</li>
+            </ul>
+            <a class="btn reelbtn" href="#reel-aseer" data-i18n="watch">Watch the case-study reel</a>
+          </div>
+          <div class="gallery">
+            <figure><img loading="lazy" src="assets/img/aseer-pool.jpg" alt="Aseer Time summer post with Gulf-dialect headline" width="860" height="1075"><figcaption data-i18n="g_a1">Gulf-dialect summer post</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/aseer-offer.jpg" alt="Aseer Time weekend offer post" width="860" height="860"><figcaption data-i18n="g_a2">Weekend offer · Iraq market</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/aseer-contest.jpg" alt="Branch sales contest post" width="760" height="760"><figcaption data-i18n="g_a3">Branch sales contest</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/aseer-plan.jpg" alt="Excerpt of the content plan table" width="900" height="263"><figcaption data-i18n="g_a4">Content plan · Aug – Sep 2024</figcaption></figure>
+          </div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary><span class="no">03</span><h3><span class="dot" style="background:#FFB020"></span>Prolight Media</h3><div class="meta"><b data-i18n="c3r">Digital Marketing Manager</b><span data-i18n="c3m">Saudi Arabia · agency · beauty, real estate, medical, retail</span></div><span class="open" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <div>
+            <h4 data-i18n="lbl_ch">The challenge</h4>
+            <p data-i18n="c3ch">Clients in very different sectors, each with its own buying decision, and ad results that only made sense once the tracking behind them was checked.</p>
+            <h4 data-i18n="lbl_do">What I did</h4>
+            <ul>
+              <li data-i18n="c3d1">Built a strategy per business, matching message, design and targeting to its buyers.</li>
+              <li data-i18n="c3d2">Audited Business Suite, ad accounts, tracking pixels, lead forms and conversion paths to find gaps.</li>
+              <li data-i18n="c3d3">Coordinated designers, copywriters and media buyers around one campaign goal.</li>
+              <li data-i18n="c3d4">Wrote client reports with clear next steps, backed by A/B tests, to lower acquisition cost.</li>
+            </ul>
+            <h4 data-i18n="lbl_res">Results</h4>
+            <div class="res">
+              <span><strong>7,283</strong><span data-i18n="c3x1">profile visits, +335.8%</span></span>
+              <span><strong>22,002</strong><span data-i18n="c3x2">engagements at SAR 0.06</span></span>
+              <span><strong>159</strong><span data-i18n="c3x3">sales conversations in a month</span></span>
+              <span><strong>69</strong><span data-i18n="c3x4">Snapchat leads at $15.75</span></span>
+            </div>
+            <a class="btn reelbtn" href="#reel-prolight" data-i18n="watch">Watch the case-study reel</a>
+          </div>
+          <div class="gallery">
+            <figure class="wide"><img loading="lazy" src="assets/img/pro-visits.jpg" alt="Meta Ads Manager: 7,283 Instagram profile visits" width="900" height="484"><figcaption data-i18n="g_p1">Meta Ads Manager · Profile visits · 28 Oct – 7 Nov 2024</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/pro-engage.jpg" alt="Meta Ads Manager: 22,002 post engagements" width="633" height="411"><figcaption data-i18n="g_p2">Meta Ads Manager · Engagement</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/pro-msgs.jpg" alt="Meta Ads Manager: 159 messaging conversations" width="865" height="384"><figcaption data-i18n="g_p3">Meta Ads Manager · Messages · December</figcaption></figure>
+            <figure class="wide"><img loading="lazy" src="assets/img/pro-snap.jpg" alt="Snapchat Ads Manager: 69 leads" width="900" height="179"><figcaption data-i18n="g_p4">Snapchat Ads Manager · Leads</figcaption></figure>
+          </div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary><span class="no">04</span><h3><span class="dot" style="background:#E0B10F"></span>Smart Solutions × UP VELA</h3><div class="meta"><b data-i18n="c4r">Senior Digital Marketing Specialist</b><span data-i18n="c4m">UAE · agency · crypto trading app</span></div><span class="open" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <div>
+            <h4 data-i18n="lbl_ch">The challenge</h4>
+            <p data-i18n="c4ch">A technical product with many parts to explain: trading bots, available coins and subscription packages, all on social feeds.</p>
+            <h4 data-i18n="lbl_do">What I did</h4>
+            <ul>
+              <li data-i18n="c4d1">Gave each product feature its own angle and message instead of explaining everything at once.</li>
+              <li data-i18n="c4d2">Wrote the visual briefs that tied copy to the app's real screens.</li>
+              <li data-i18n="c4d3">Produced introductory, promotional, educational and interactive content, including a YouTube walkthrough.</li>
+              <li data-i18n="c4d4">Published across Facebook, Instagram, YouTube and TikTok.</li>
+            </ul>
+            <a class="btn reelbtn" href="#reel-upvela" data-i18n="watch">Watch the case-study reel</a>
+          </div>
+          <div class="gallery">
+            <figure><img loading="lazy" src="assets/img/upv-signals.jpg" alt="UP VELA app signals post" width="550" height="552"><figcaption data-i18n="g_u1">Introductory · app screens</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/upv-packs.jpg" alt="UP VELA subscription packages post" width="547" height="548"><figcaption data-i18n="g_u2">Promotional · packages</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/upv-coins.jpg" alt="UP VELA available coins post" width="550" height="551"><figcaption data-i18n="g_u3">Introductory · available coins</figcaption></figure>
+          </div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary><span class="no">05</span><h3><span class="dot" style="background:#2FD49A"></span>Palmenburg</h3><div class="meta"><b data-i18n="c5r">Social Media Marketing Specialist · remote</b><span data-i18n="c5m">Germany · agency · Oct 2022 – Jun 2023 · 6 brands</span></div><span class="open" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <div>
+            <h4 data-i18n="lbl_ch">The challenge</h4>
+            <p data-i18n="c5ch">Six clients in six sectors: two clinics, a language center, a perfume house, a sweets maker and a children's show. Each needed its own voice and goal.</p>
+            <h4 data-i18n="lbl_do">What I did</h4>
+            <ul>
+              <li data-i18n="c5d1">Researched each market and its competitors, then set a clear goal per account: awareness, engagement or leads.</li>
+              <li data-i18n="c5d2">Ran content and paid ads for Pure Care and Omega clinics in Arabic, English and French.</li>
+              <li data-i18n="c5d3">Tied Skilled Center's courses to practical benefits in Arabic, English and Turkish.</li>
+              <li data-i18n="c5d4">Showed each Purity scent's character and asked followers to pick floral, woody or citrus.</li>
+              <li data-i18n="c5d5">Created Ramadan offers for Sewar Damascus Sweets and adventure videos for Mira &amp; Mila.</li>
+            </ul>
+            <h4 data-i18n="lbl_res">Results</h4>
+            <div class="res">
+              <span><strong>42</strong><span data-i18n="c5x1">leads in 6 days at $7.94</span></span>
+              <span><strong>1,158</strong><span data-i18n="c5x2">page likes at $0.11</span></span>
+              <span><strong>34,535</strong><span data-i18n="c5x3">engagements for $59.05</span></span>
+            </div>
+            <a class="btn reelbtn" href="#reel-palmenburg" data-i18n="watch">Watch the case-study reel</a>
+          </div>
+          <div class="gallery">
+            <figure class="wide"><img loading="lazy" src="assets/img/palm-leads.jpg" alt="Meta Ads Manager: 42 on-Facebook leads" width="780" height="395"><figcaption data-i18n="g_m1">Pure Care · French leads campaign · 1–6 May 2023</figcaption></figure>
+            <figure class="wide"><img loading="lazy" src="assets/img/palm-omega.jpg" alt="Meta Ads Manager: 34,535 post engagements" width="821" height="336"><figcaption data-i18n="g_m2">Omega Clinic · Engagement campaign</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/palm-implant.jpg" alt="Pure Care dental implant post" width="552" height="552"><figcaption data-i18n="g_m3">Pure Care</figcaption></figure>
+            <figure><img loading="lazy" src="assets/img/palm-purity.jpg" alt="Purity Perfumes hair mist post" width="555" height="555"><figcaption data-i18n="g_m4">Purity Perfumes</figcaption></figure>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="reels">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="v_h">Showreel and case-study reels</h2>
+        <p data-i18n="v_p">Short vertical videos, voiced in my own cloned voice. Tap one to play.</p>
+      </div>
+      <div class="reels">
+        <div class="phone feature"><video controls preload="none" playsinline poster="assets/img/poster-Fares_Ashraf_Showreel_Intro_AR.jpg" src="assets/video/Fares_Ashraf_Showreel_Intro_AR.mp4"></video><p data-i18n="v0">Showreel 2026<small>22 sec · Arabic</small></p></div>
+        <div class="phone" id="reel-sereno"><video controls preload="none" playsinline poster="assets/img/poster-Sereno_Egypt_Case_Study_Reel_AR.jpg" src="assets/video/Sereno_Egypt_Case_Study_Reel_AR.mp4"></video><p>Sereno Egypt<small data-i18n="v_ar">Case study · Arabic</small></p></div>
+        <div class="phone" id="reel-aseer"><video controls preload="none" playsinline poster="assets/img/poster-Aseer_Time_Case_Study_Reel_AR.jpg" src="assets/video/Aseer_Time_Case_Study_Reel_AR.mp4"></video><p>Aseer Time<small data-i18n="v_ar">Case study · Arabic</small></p></div>
+        <div class="phone" id="reel-prolight"><video controls preload="none" playsinline poster="assets/img/poster-Prolight_Media_Case_Study_Reel_AR.jpg" src="assets/video/Prolight_Media_Case_Study_Reel_AR.mp4"></video><p>Prolight Media<small data-i18n="v_ar">Case study · Arabic</small></p></div>
+        <div class="phone" id="reel-upvela"><video controls preload="none" playsinline poster="assets/img/poster-Smart_Solutions_UP_VELA_Case_Study_Reel_AR.jpg" src="assets/video/Smart_Solutions_UP_VELA_Case_Study_Reel_AR.mp4"></video><p>Smart Solutions × UP VELA<small data-i18n="v_ar">Case study · Arabic</small></p></div>
+        <div class="phone" id="reel-palmenburg"><video controls preload="none" playsinline poster="assets/img/poster-Palmenburg_Case_Study_Reel_AR.jpg" src="assets/video/Palmenburg_Case_Study_Reel_AR.mp4"></video><p>Palmenburg<small data-i18n="v_ar">Case study · Arabic</small></p></div>
+        <div class="phone"><video controls preload="none" playsinline poster="assets/img/poster-Fares_Ashraf_Marketing_Reel_Intro_EN.jpg" src="assets/video/Fares_Ashraf_Marketing_Reel_Intro_EN.mp4"></video><p data-i18n="v7">Marketing reel<small>English · 53 sec</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-i18n="s_h">What I bring</h2>
+        <p data-i18n="s_p">A marketer who can read a dashboard, write the caption and build the tool.</p>
+      </div>
+      <div class="skills">
+        <div class="skill"><h3 data-i18n="s1h">Performance marketing</h3><p data-i18n="s1p">Campaign planning and media buying on Meta, Google Search and Shopping, Snapchat and TikTok, with budget moved to what converts.</p></div>
+        <div class="skill"><h3 data-i18n="s2h">Lead generation</h3><p data-i18n="s2p">Lead forms, messaging campaigns, retargeting and customer-data audiences, judged by lead quality, not cost per click alone.</p></div>
+        <div class="skill"><h3 data-i18n="s3h">Tracking and funnels</h3><p data-i18n="s3p">Audits of pixels, ad accounts, forms and conversion paths, so the numbers can be trusted before they are scaled.</p></div>
+        <div class="skill"><h3 data-i18n="s4h">Content and creative direction</h3><p data-i18n="s4p">Content ideas, visual briefs and copy in Arabic and English, written in Egyptian, Saudi and Gulf dialects.</p></div>
+        <div class="skill"><h3 data-i18n="s5h">Testing and reporting</h3><p data-i18n="s5p">A/B tests on messages and designs, and client reports that end with clear next steps.</p></div>
+        <div class="skill"><h3 data-i18n="s6h">AI and automation</h3><p data-i18n="s6p">Also an ML engineer: I built a RAG chat assistant for Sereno and publish Python packages for data work.</p></div>
+      </div>
+      <div class="tools" aria-label="Tools">
+        <span class="chip">Meta Ads Manager</span><span class="chip">Meta Business Suite</span><span class="chip">Google Ads</span><span class="chip">Snapchat Ads</span><span class="chip">TikTok Ads</span><span class="chip">Meta Pixel</span><span class="chip">A/B testing</span><span class="chip">Python</span><span class="chip">RAG / LLMs</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2 data-i18n="x_h">Experience</h2></div>
+      <div class="xp">
+        <div><b>Sereno Egypt</b><span data-i18n="x1">Digital Marketing Manager · Egypt</span><span class="when">2024 – 2026</span></div>
+        <div><b>Prolight Media</b><span data-i18n="x3">Digital Marketing Manager · Saudi Arabia</span><span class="when">2024 – 2025</span></div>
+        <div><b>Aseer Time</b><span data-i18n="x4">Regional Social Media Marketing Specialist · GCC</span><span class="when">2024 – 2025</span></div>
+        <div><b>Smart Solutions</b><span data-i18n="x2">Senior Digital Marketing Specialist · UAE</span><span class="when">2023 – 2024</span></div>
+        <div><b>Palmenburg</b><span data-i18n="x5">Social Media Marketing Specialist · Germany, remote</span><span class="when">2022 – 2023</span></div>
+        <div><b data-i18n="x6b">Alexandria University</b><span data-i18n="x6">B.Sc. Mechanical Engineering</span><span class="when">2019 – 2023</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2 data-i18n="ct_h">Let's grow your brand.</h2>
+          <p data-i18n="ct_p">Open to full-time roles and freelance projects in performance marketing, lead generation and content.</p>
+        </div>
+        <div class="card">
+          <div class="k" data-i18n="ct_k">Portfolio</div>
+          <div class="row"><span class="val" id="site">fares.digital</span><button class="copy" type="button" data-copy="site" data-i18n="copy">Copy</button></div>
+          <div class="k" data-i18n="ct_e">Email</div>
+          <div class="row"><span class="val sm" id="mail">farsashraf44@gmail.com</span><button class="copy" type="button" data-copy="mail" data-i18n="copy">Copy</button></div>
+          <div class="k" data-i18n="ct_w">Phone &amp; WhatsApp</div>
+          <div class="row"><span class="val sm" id="tel" dir="ltr">+20 106 279 2254</span><button class="copy" type="button" data-copy="tel" data-i18n="copy">Copy</button></div>
+          <a class="wa" href="https://wa.me/201062792254" target="_blank" rel="noopener" data-i18n="ct_wa">Message me on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span data-i18n="ft1">© 2026 Fares Ashraf</span>
+  <span data-i18n="ft2">Cairo, Egypt · working across MENA and Europe</span>
+</footer>
+
+<script>
+const AR={
+brand:"فارس أشرف",nav1:"النتائج",nav2:"الأعمال",nav3:"الريلز",nav4:"المهارات",nav5:"تواصل",
+eyebrow:"أخصائي أول في التسويق الرقمي · القاهرة",name:'فارس <span>أشرف</span>',
+role:"تسويق أداء، وتوليد عملاء، ومحتوى لعلامات تجارية في مصر والخليج وأوروبا.",
+thesis:"بحوّل ميزانية الإعلانات لمحادثات مع مشترين حقيقيين، وبقيس كل خطوة بعقلية المهندس.",
+m1:"مصر",m2:"السعودية",m3:"قطر",m4:"الإمارات",m5:"تركيا",m6:"ألمانيا (عن بُعد)",
+cta1:"شوف دراسات الحالة",cta2:"شاهد الشوريل",f1:"سنين في التسويق الرقمي",f2:"علامة تجارية ووكالة",f3:"منصات إعلانية: ميتا، جوجل، سناب شات، تيك توك",
+tag:"زيادة في العملاء المؤهلين في سيرينو إيجيبت",
+r_h:"أرقام بمصادرها",r_p:"كل رقم هنا من حملة أنا أدرتها، والسطر اللي تحته بيوضّح اتسجّل فين.",
+k1:"زيادة في العملاء المؤهلين",k1s:"سيرينو إيجيبت · تقارير الشركة",k2:"إجمالي المبيعات بالجنيه",k2s:"سيرينو إيجيبت · تقارير الشركة",
+k3:'مشاهدة على إنستجرام · وصول 957,228 <span class="up">↑115.3%</span>',k3s:"سيرينو إيجيبت · Meta Business Suite · سبتمبر 2024 – أغسطس 2025",
+k4:"نقرة على الرابط بـ 2.35 جنيه للنقرة",k4s:"سيرينو إيجيبت · Meta Ads Manager · أكتوبر 2024 – أغسطس 2025",
+k5:"تفاعل على المنشورات بإجمالي 59.05 دولار",k5s:"أوميجا كلينيك عبر بالمنبرج · Meta Ads Manager",
+k6:'زيارة لبروفايل إنستجرام <span class="up">↑335.8%</span> عن الـ 11 يوم السابقة',k6s:"عميل برولايت ميديا · Meta Ads Manager · 28 أكتوبر – 7 نوفمبر 2024",
+k7:"Lead على فيسبوك في 6 أيام بـ 7.94 دولار",k7s:"بيور كير عبر بالمنبرج · حملة بالفرنسية · 1–6 مايو 2023",
+k8:"عميل محتمل من 77,223 ظهور مدفوع",k8s:"عميل برولايت ميديا · Snapchat Ads · 24 ديسمبر 2024 – 9 يناير 2025",
+w_h:"دراسات الحالة",w_p:"خمس شركات، من مصنع أثاث في القاهرة لوكالة ألمانية. افتح أي واحدة تشوف المشكلة، وعملت إيه، والدليل.",
+lbl_ch:"التحدي",lbl_do:"عملت إيه",lbl_res:"النتائج",watch:"شاهد ريل دراسة الحالة",
+c1r:"مدير التسويق الرقمي",c1m:"مصر · أثاث خارجي · 2024–2026",
+c1ch:"سيرينو بتبيع للأفراد وللفنادق والمنتجعات والموزعين. كل واحد بيشتري بطريقة مختلفة، والاستفسارات الرخيصة مكانتش بتتحوّل لطلبات حقيقية.",
+c1d1:"كتبت رسائل ورحلات عميل منفصلة للأفراد ولمشتري الفنادق.",c1d2:"نقلت الميزانية للمصادر اللي بتحوّل، ووقفت المجموعات اللي بتجيب استفسارات رخيصة وضعيفة.",
+c1d3:"شغّلت إعادة استهداف وجماهير مبنية على بيانات العملاء، واختبرت الرسائل والتصميمات بـ A/B.",c1d4:"حسّنت رحلة الموقع، وأطلقت حملات جوجل شوبينج.",
+c1d5:"طوّرت AskQuo، مساعد محادثة بالذكاء الاصطناعي مبني على محتوى سيرينو، كنسخة أولية.",
+c1x1:"عملاء مؤهلين",c1x2:"مبيعات بالجنيه",c1x3:"متابع على إنستجرام",c1x4:"كرسي في طلب كميات واحد",
+c2r:"أخصائي سوشيال ميديا إقليمي",c2m:"السعودية · قطر · مأكولات ومشروبات",
+c2ch:"علامة عصائر وحلويات واحدة، وأسواق كتير. كل جمهور محتاج يسمع العلامة بلهجته وفي مناسباته.",
+c2d1:"كتبت الكابشن باللهجة السعودية والقطرية والخليجية، ومربوط بالحياة والمناسبات المحلية.",c2d2:"بنيت خطة محتوى من 14 فكرة في 6 أسابيع، بميزانية ممولة 20 دولار يوميًا على الأقل لكل حساب، و A/B على كل المحتوى.",
+c2d3:"خططت لإطلاق مجموعة فلامينجو في السعودية وقطر.",c2d4:"شغّلت حملات رمضان والعيد والمناسبات الوطنية على ميتا وسناب شات، وتعاونات مع مؤثرين.",
+c2d5:"صمّمت مسابقات بين الفروع بتكافئ النمو في مبيعات منتج واحد.",
+g_s1:"Meta Business Suite · إنستجرام · سبتمبر 2024 – أغسطس 2025",g_s2:"Meta Ads Manager · زيارات",g_s3:"Google Ads · شوبينج · فبراير – مارس 2026",
+g_p1:"Meta Ads Manager · زيارات البروفايل · 28 أكتوبر – 7 نوفمبر 2024",g_p2:"Meta Ads Manager · تفاعل",g_p3:"Meta Ads Manager · رسائل · ديسمبر",g_p4:"Snapchat Ads Manager · عملاء محتملين",
+g_m1:"بيور كير · حملة Leads بالفرنساوي · 1–6 مايو 2023",g_m2:"أوميجا كلينيك · حملة تفاعل",g_m3:"بيور كير",g_m4:"عطور بيوريتي",
+g_a1:"منشور صيفي باللهجة الخليجية",g_a2:"عرض الويك إند · السوق العراقي",g_a3:"مسابقة مبيعات بين الفروع",g_a4:"خطة المحتوى · أغسطس – سبتمبر 2024",
+c3r:"مدير التسويق الرقمي",c3m:"السعودية · وكالة · تجميل، عقارات، طبي، تجزئة",
+c3ch:"عملاء في قطاعات مختلفة جدًا، لكل واحد قرار شراء مختلف، ونتايج إعلانات مكانش ليها معنى غير بعد مراجعة التتبّع اللي وراها.",
+c3d1:"بنيت استراتيجية لكل بيزنس، بتربط الرسالة والتصميم والاستهداف بمشتريه.",c3d2:"راجعت Business Suite والحسابات الإعلانية والبكسل ونماذج العملاء ومسارات التحويل علشان ألاقي الفجوات.",
+c3d3:"نسّقت بين المصممين وكتّاب المحتوى والميديا بايرز حوالين هدف الحملة.",c3d4:"كتبت تقارير للعملاء فيها خطوات واضحة، مدعومة باختبارات A/B، لتقليل تكلفة الاكتساب.",
+c3x1:"زيارة للبروفايل، ‎+335.8%",c3x2:"تفاعل بـ 0.06 ريال",c3x3:"محادثة بيع في شهر",c3x4:"Lead على سناب شات بـ 15.75 دولار",
+c4r:"أخصائي أول في التسويق الرقمي",c4m:"الإمارات · وكالة · تطبيق تداول عملات رقمية",
+c4ch:"منتج تقني فيه أجزاء كتير محتاجة شرح: بوتات التداول، والعملات المتاحة، وباقات الاشتراك، وكل ده على السوشيال ميديا.",
+c4d1:"اديت كل خاصية في المنتج زاوية ورسالة لوحدها، بدل ما أشرح كل حاجة مرة واحدة.",c4d2:"كتبت الـ Visual Brief اللي بيربط النص بشاشات التطبيق الحقيقية.",
+c4d3:"عملت محتوى تعريفي وترويجي وتعليمي وتفاعلي، منه فيديو شرح على يوتيوب.",c4d4:"نشرت على فيسبوك وإنستجرام ويوتيوب وتيك توك.",
+g_u1:"تعريفي · شاشات التطبيق",g_u2:"ترويجي · الباقات",g_u3:"تعريفي · العملات المتاحة",
+c5r:"أخصائي تسويق سوشيال ميديا · عن بُعد",c5m:"ألمانيا · وكالة · أكتوبر 2022 – يونيو 2023 · 6 علامات",
+c5ch:"ست عملاء في ست قطاعات: عيادتين، ومركز لغات، وبيت عطور، ومحل حلويات، وبرنامج أطفال. كل واحد محتاج صوت وهدف مختلف.",
+c5d1:"درست كل سوق ومنافسيه، وحددت هدف واضح لكل حساب: وعي، أو تفاعل، أو عملاء محتملين.",c5d2:"أدرت المحتوى والإعلانات لعيادتي بيور كير وأوميجا بالعربي والإنجليزي والفرنساوي.",
+c5d3:"ربطت دورات سكيلد سنتر بفايدة عملية بالعربي والإنجليزي والتركي.",c5d4:"قدّمت شخصية كل عطر من بيوريتي، وسألت الجمهور: زهري ولا خشبي ولا حمضي؟",
+c5d5:"عملت عروض رمضان لحلويات سوار الشام، وفيديوهات مغامرات لميرا وميلا.",
+c5x1:"Lead في 6 أيام بـ 7.94 دولار",c5x2:"إعجاب بالصفحة بـ 0.11 دولار",c5x3:"تفاعل بـ 59.05 دولار",
+v_h:"الشوريل وريلز دراسات الحالة",v_p:"فيديوهات رأسية قصيرة، بصوتي. اضغط على أي واحد يشتغل.",v0:"شوريل 2026<small>22 ثانية · عربي</small>",v_ar:"دراسة حالة · عربي",v7:"ريل تسويقي<small>إنجليزي · 53 ثانية</small>",
+s_h:"اللي بقدّمه",s_p:"مسوّق بيقرا الداشبورد، ويكتب الكابشن، ويبني الأداة.",
+s1h:"تسويق الأداء",s1p:"تخطيط الحملات وشراء الإعلانات على ميتا، وجوجل سيرش وشوبينج، وسناب شات، وتيك توك، ونقل الميزانية للي بيحوّل.",
+s2h:"توليد العملاء",s2p:"نماذج العملاء، وحملات الرسائل، وإعادة الاستهداف، وجماهير من بيانات العملاء، والحكم بجودة العميل مش تكلفة النقرة بس.",
+s3h:"التتبّع ومسارات التحويل",s3p:"مراجعة البكسل والحسابات والنماذج ومسارات التحويل، علشان نثق في الأرقام قبل ما نكبّر.",
+s4h:"المحتوى والتوجيه الإبداعي",s4p:"أفكار المحتوى، والـ Visual Brief، والكتابة بالعربي والإنجليزي، باللهجة المصرية والسعودية والخليجية.",
+s5h:"الاختبار والتقارير",s5p:"اختبارات A/B على الرسائل والتصميمات، وتقارير للعملاء بتنتهي بخطوات واضحة.",
+s6h:"الذكاء الاصطناعي والأتمتة",s6p:"أنا كمان مهندس تعلّم آلي: بنيت مساعد محادثة RAG لسيرينو، وبنشر مكتبات Python لتحليل البيانات.",
+x_h:"الخبرة",x1:"مدير التسويق الرقمي · مصر",x2:"أخصائي أول في التسويق الرقمي · الإمارات",x3:"مدير التسويق الرقمي · السعودية",x4:"أخصائي سوشيال ميديا إقليمي · الخليج",
+x5:"أخصائي تسويق سوشيال ميديا · ألمانيا، عن بُعد",x6b:"جامعة الإسكندرية",x6:"بكالوريوس الهندسة الميكانيكية",
+ct_h:"يلا نكبّر البراند بتاعك.",ct_p:"متاح لوظائف دوام كامل ومشاريع فريلانس في تسويق الأداء وتوليد العملاء والمحتوى.",ct_k:"البورتفوليو",ct_e:"الإيميل",ct_w:"الموبايل والواتساب",ct_wa:"كلّمني على واتساب",copy:"نسخ",
+ft1:"© 2026 فارس أشرف",ft2:"القاهرة، مصر · بشتغل في الشرق الأوسط وأوروبا"};
+const EN={};
+document.querySelectorAll('[data-i18n]').forEach(el=>{EN[el.dataset.i18n]=el.innerHTML;});
+const btn=document.getElementById('lang');
+function setLang(l){
+  const d=l==='ar'?AR:EN;
+  document.documentElement.lang=l; document.documentElement.dir=l==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=d[el.dataset.i18n]; if(v!==undefined) el.innerHTML=v;});
+  btn.textContent=l==='ar'?'English':'العربية';
+  try{localStorage.setItem('fa-lang',l)}catch(e){}
+}
+btn.addEventListener('click',()=>setLang(document.documentElement.lang==='ar'?'en':'ar'));
+try{const s=localStorage.getItem('fa-lang'); if(s==='ar') setLang('ar');}catch(e){}
+document.querySelectorAll('.reelbtn').forEach(a=>a.addEventListener('click',()=>{const v=document.querySelector(a.getAttribute('href')+' video'); if(v){setTimeout(()=>{v.play().catch(()=>{})},500)}}));
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.copy), t=el.textContent.trim(), ar=()=>document.documentElement.lang==='ar';
+  const done=()=>{b.textContent=ar()?'اتنسخ':'Copied';clearTimeout(b._t);b._t=setTimeout(()=>b.textContent=ar()?AR.copy:EN.copy,1600)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);try{if(document.execCommand('copy'))done()}catch(e){}};
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done).catch(fallback)}else fallback();
+}));
+</script>
+</body>
+</html>
