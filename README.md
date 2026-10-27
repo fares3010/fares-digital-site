@@ -3,10 +3,13 @@
 A static, single-page site. There's no build step and no server code, so it runs on any static host.
 
 ```
-index.html          the whole page (HTML + CSS + JS, English/Arabic switch)
+index.html          the whole page in English (HTML + CSS + JS, SEO tags and structured data)
+ar/index.html       the Arabic page, generated from index.html + tools/ar.json (don't edit by hand)
+tools/ar.json       all Arabic text, keyed to the data-i18n="..." attributes in index.html
+tools/build_ar.py   rebuilds ar/index.html
 404.html            "page not found" page
 robots.txt          lets search engines index the site
-sitemap.xml         one-page sitemap for fares.digital
+sitemap.xml         sitemap with the English and Arabic pages linked as translations
 assets/
   favicon.svg       browser-tab icon
   img/              portrait, campaign screenshots, creatives, video posters, og-image.jpg (link preview)
@@ -40,6 +43,13 @@ After the domain is connected, turn on HTTPS. Netlify, Vercel, Cloudflare and Gi
 
 ## Editing
 - Contact details are in the `#contact` section of `index.html`, and the WhatsApp link is `https://wa.me/201062792254`.
-- English text sits in the HTML. Arabic text is in the `AR = { ... }` object near the end of `index.html`, with matching keys (`data-i18n="..."`).
+- English text sits in the HTML. Arabic text is in `tools/ar.json`, with matching keys (`data-i18n="..."`). Keys starting with `_` are the Arabic page title, description and link-preview text.
+- After changing either file, run `python3 tools/build_ar.py` to regenerate `ar/index.html`, and commit both. The script stops and names the key if an Arabic translation is missing.
+- When you publish changes, update `<lastmod>` in `sitemap.xml`.
+
+## Search engines
+- The English page is `/` and the Arabic page is `/ar/`. Each one names the other with `hreflang`, so Google shows Arabic searchers the Arabic page.
+- Structured data (`application/ld+json` in the `<head>`) describes you, your services and the countries you serve. Check it at https://search.google.com/test/rich-results.
+- Submit `https://fares.digital/sitemap.xml` in Google Search Console and Bing Webmaster Tools after each big change.
 - To replace a video, keep the same file name in `assets/video/`, or update the `src` and `poster` in the Showreel or Reels section.
 - Fonts load from Google Fonts. Everything else is self-hosted.
