@@ -74,6 +74,16 @@ article strong{font-weight:700}
 .stats span{display:block;font-size:15px;line-height:1.5}
 .stats small{display:block;color:var(--muted);font-size:13px;margin-top:6px}
 @media (max-width:420px){.stats{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;margin-top:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+.tbl table{width:100%;border-collapse:collapse;font-size:16px}
+.tbl th,.tbl td{padding:12px clamp(10px,3vw,16px);text-align:start;border-bottom:1px solid var(--line);line-height:1.5}
+.tbl tbody tr:last-child>*{border-bottom:0}
+.tbl thead th{font-size:14.5px;color:var(--muted);font-weight:700;vertical-align:bottom}
+.tbl thead small{font-weight:500}
+.tbl td{direction:ltr;text-align:right;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.tbl tbody th{font-weight:700}
+.sources{font-size:15.5px}
+.sources a{word-break:break-word}
 .check{list-style:none;padding:0!important}
 .check li{position:relative;padding-inline-start:30px}
 .check li::before{content:"";position:absolute;inset-inline-start:0;top:.55em;width:16px;height:16px;border-radius:4px;border:2px solid var(--accent)}
