@@ -10,7 +10,7 @@ sitemap.xml         one-page sitemap for fares.digital
 assets/
   favicon.svg       browser-tab icon
   img/              portrait, campaign screenshots, creatives, video posters, og-image.jpg (link preview)
-  video/            showreel + 5 case-study reels + English marketing reel (540×960 MP4)
+  video/            full showreel (720×1280, autoplays muted on scroll) + 5 case-study reels + English marketing reel (540×960 MP4)
 ```
 
 ## Try it on your computer
@@ -41,5 +41,5 @@ After the domain is connected, turn on HTTPS. Netlify, Vercel, Cloudflare and Gi
 ## Editing
 - Contact details are in the `#contact` section of `index.html`, and the WhatsApp link is `https://wa.me/201062792254`.
 - English text sits in the HTML. Arabic text is in the `AR = { ... }` object near the end of `index.html`, with matching keys (`data-i18n="..."`).
-- To replace a video, keep the same file name in `assets/video/`, or update the `src` and `poster` in the Reels section.
+- To replace a video, keep the same file name in `assets/video/`, or update the `src` and `poster` in the Showreel or Reels section.
 - Fonts load from Google Fonts. Everything else is self-hosted.
