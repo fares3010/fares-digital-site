@@ -6,6 +6,8 @@ A static, single-page site. There's no build step and no server code, so it runs
 index.html          the whole page in English (HTML + CSS + JS, SEO tags and structured data)
 ar/index.html       the Arabic page, generated from index.html + tools/ar.json (don't edit by hand)
 en/index.html       the English page at /en/, generated copy of index.html (don't edit by hand)
+ar/blog/            Arabic blog: index.html lists the posts, each post is ar/blog/<slug>/index.html
+assets/blog.css     styles for the blog pages
 tools/ar.json       all Arabic text, keyed to the data-i18n="..." attributes in index.html
 tools/build.py      rebuilds ar/index.html and en/index.html
 404.html            "page not found" page
@@ -47,6 +49,12 @@ After the domain is connected, turn on HTTPS. Netlify, Vercel, Cloudflare and Gi
 - English text sits in the HTML. Arabic text is in `tools/ar.json`, with matching keys (`data-i18n="..."`). Keys starting with `_` are the Arabic page title, description and link-preview text.
 - After changing either file, run `python3 tools/build.py` to regenerate `ar/index.html` and `en/index.html`, and commit them. The script stops and names the key if an Arabic translation is missing.
 - When you publish changes, update `<lastmod>` in `sitemap.xml`.
+
+## Adding a blog post
+1. Copy `ar/blog/messages-without-sales/` to a new folder named after the post in English (e.g. `ar/blog/ad-costs-egypt/`).
+2. In the copy, change the title, description, canonical and `og:url` links, the dates, the structured data and the article text.
+3. Add a card for it at the top of the list in `ar/blog/index.html`, and add it to `blogPost` in that page's structured data.
+4. Add its address to `sitemap.xml`.
 
 ## Search engines
 - The English page is `/` (also reachable at `/en/`, which points search engines back to `/`) and the Arabic page is `/ar/`. Each one names the other with `hreflang`, so Google shows Arabic searchers the Arabic page.

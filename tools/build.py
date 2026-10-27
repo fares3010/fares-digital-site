@@ -83,6 +83,9 @@ out = replace_once(
     '<a class="lang" id="lang" href="../" hreflang="en" lang="en">English</a>',
 )
 out = re.sub(r'alt="Portrait of Fares Ashraf[^"]*"', f'alt="{escape(ar["_portrait_alt"])}"', out, count=1)
+# The blog is Arabic only for now, so only the Arabic page links to it.
+out = replace_once(out, '<a href="#contact" data-i18n="nav5">', '<a href="blog/">المدونة</a>\n      <a href="#contact" data-i18n="nav5">')
+out = replace_once(out, "</footer>", '  <a href="blog/">المدونة</a>\n</footer>')
 out = from_subfolder(out)
 
 (ROOT / "ar").mkdir(exist_ok=True)
