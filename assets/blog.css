@@ -82,6 +82,8 @@ article strong{font-weight:700}
 .tbl thead small{font-weight:500}
 .tbl td{direction:ltr;text-align:right;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
 .tbl tbody th{font-weight:700}
+.tbl.text td{direction:inherit;text-align:start;font-variant-numeric:normal}
+.tbl.text table{font-size:15px}
 .sources{font-size:15.5px}
 .sources a{word-break:break-word}
 .check{list-style:none;padding:0!important}
