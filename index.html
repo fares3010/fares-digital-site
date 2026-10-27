@@ -163,6 +163,7 @@ html[lang="ar"] .gallery figcaption{font-family:var(--body);font-size:12.5px}
 .svc-group+.svc-group{margin-top:34px}
 .svc-group>.eyebrow{margin-bottom:14px}
 .svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.svcs.four{grid-template-columns:repeat(4,minmax(0,1fr))}
 .svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .svc .no{font-family:var(--mono);font-size:13px;color:var(--accent-ink)}
 .svc h3{font-size:22px;font-weight:800}
@@ -170,18 +171,12 @@ html[lang="ar"] .gallery figcaption{font-family:var(--body);font-size:12.5px}
 .svc .incl{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--ink);line-height:1.5}
 .svc-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:30px}
 .svc-cta p{color:var(--muted)}
-@media (max-width:860px){.svcs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.svcs{grid-template-columns:1fr}}
+@media (max-width:1040px){.svcs.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.svcs{grid-template-columns:repeat(2,minmax(0,1fr))}.svcs:not(.four) .svc:last-child{grid-column:1/-1}}
+@media (max-width:520px){.svcs,.svcs.four{grid-template-columns:1fr}}
 
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 36px}
-.skill{min-width:0}
-.skill h3{font-size:22px;font-weight:800;margin-bottom:8px}
-.skill p{color:var(--muted)}
-.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
 .tools .chip{font-family:var(--mono);font-size:13px}
-@media (max-width:860px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.skills{grid-template-columns:1fr}}
 
 /* experience */
 .xp{display:grid;gap:0;border-top:1px solid var(--line)}
@@ -219,7 +214,6 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:14px;display:flex;ju
       <a href="#work" data-i18n="nav2">Work</a>
       <a href="#reels" data-i18n="nav3">Reels</a>
       <a href="#services" data-i18n="nav6">Services</a>
-      <a href="#skills" data-i18n="nav4">Skills</a>
       <a href="#contact" data-i18n="nav5">Contact</a>
     </nav>
     <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
@@ -457,47 +451,39 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:14px;display:flex;ju
     <div class="wrap">
       <div class="sec-head">
         <h2 data-i18n="sv_h">Services</h2>
-        <p data-i18n="sv_p">Beyond running campaigns, I make the creative that goes into them and build the store or system behind them.</p>
+        <p data-i18n="sv_p">One person from strategy to delivery: I run the campaigns, make the creative that goes into them and build the store or system behind them.</p>
+      </div>
+      <div class="svc-group">
+        <p class="eyebrow" data-i18n="sv_g0">Marketing</p>
+        <div class="svcs">
+          <div class="svc"><span class="no">01</span><h3 data-i18n="sv7h">Performance marketing</h3><p data-i18n="sv7p">Campaign planning and media buying, with budget moved to what converts.</p><p class="incl" data-i18n="sv7i">Meta · Google Search and Shopping · Snapchat · TikTok</p></div>
+          <div class="svc"><span class="no">02</span><h3 data-i18n="sv8h">Lead generation</h3><p data-i18n="sv8p">Campaigns judged by lead quality, not cost per click alone.</p><p class="incl" data-i18n="sv8i">Lead forms · messaging campaigns · retargeting · customer-data audiences</p></div>
+          <div class="svc"><span class="no">03</span><h3 data-i18n="sv9h">Tracking, testing and reporting</h3><p data-i18n="sv9p">Numbers you can trust before you scale, tests that show what works, and reports that end with clear next steps.</p><p class="incl" data-i18n="sv9i">Pixel and ad-account audits · conversion paths · A/B tests · client reports</p></div>
+        </div>
       </div>
       <div class="svc-group">
         <p class="eyebrow" data-i18n="sv_g1">Creative studio</p>
-        <div class="svcs">
-          <div class="svc"><span class="no">01</span><h3 data-i18n="sv1h">Graphic design</h3><p data-i18n="sv1p">Social posts, ad creatives, campaign visuals and brand assets, designed for the platform and the market they run in.</p><p class="incl" data-i18n="sv1i">Post and story designs · ad sets · carousels · brand kits</p></div>
-          <div class="svc"><span class="no">02</span><h3 data-i18n="sv2h">Motion graphics and video</h3><p data-i18n="sv2p">Animated ads, product explainers and short-form reels that stop the scroll and carry the message in the first seconds.</p><p class="incl" data-i18n="sv2i">Reels and TikToks · animated ads · explainers · logo animation</p></div>
-          <div class="svc"><span class="no">03</span><h3 data-i18n="sv3h">Lifestyle photography</h3><p data-i18n="sv3p">Photos of your product in real settings with real people, so buyers can picture it in their own lives.</p><p class="incl" data-i18n="sv3i">Product in use · on-location shoots · retouching · social-ready crops</p></div>
+        <div class="svcs four">
+          <div class="svc"><span class="no">04</span><h3 data-i18n="sv10h">Content and creative direction</h3><p data-i18n="sv10p">Content ideas, visual briefs and copy in Arabic and English.</p><p class="incl" data-i18n="sv10i">Content plans · visual briefs · copywriting · Egyptian, Saudi and Gulf dialects</p></div>
+          <div class="svc"><span class="no">05</span><h3 data-i18n="sv1h">Graphic design</h3><p data-i18n="sv1p">Social posts, ad creatives, campaign visuals and brand assets, designed for the platform and the market they run in.</p><p class="incl" data-i18n="sv1i">Post and story designs · ad sets · carousels · brand kits</p></div>
+          <div class="svc"><span class="no">06</span><h3 data-i18n="sv2h">Motion graphics and video</h3><p data-i18n="sv2p">Animated ads, product explainers and short-form reels that stop the scroll and carry the message in the first seconds.</p><p class="incl" data-i18n="sv2i">Reels and TikToks · animated ads · explainers · logo animation</p></div>
+          <div class="svc"><span class="no">07</span><h3 data-i18n="sv3h">Lifestyle photography</h3><p data-i18n="sv3p">Photos of your product in real settings with real people, so buyers can picture it in their own lives.</p><p class="incl" data-i18n="sv3i">Product in use · on-location shoots · retouching · social-ready crops</p></div>
         </div>
       </div>
       <div class="svc-group">
         <p class="eyebrow" data-i18n="sv_g2">Build</p>
         <div class="svcs">
-          <div class="svc"><span class="no">04</span><h3 data-i18n="sv4h">E-commerce stores</h3><p data-i18n="sv4p">Online shops ready to sell from day one: catalogue, checkout, payments, shipping, and the pixels and tracking set up correctly.</p><p class="incl" data-i18n="sv4i">Store setup · payment gateways · product catalogue · Meta Pixel and Google tracking</p></div>
-          <div class="svc"><span class="no">05</span><h3 data-i18n="sv5h">Systems and full&#8209;stack software</h3><p data-i18n="sv5p">Custom web apps, dashboards and internal systems, from database to interface, built around how your team actually works.</p><p class="incl" data-i18n="sv5i">Web apps · admin dashboards · CRMs and internal tools · APIs and integrations</p></div>
-          <div class="svc"><span class="no">06</span><h3 data-i18n="sv6h">AI systems</h3><p data-i18n="sv6p">Chat assistants trained on your own content, automations and AI features added to your existing tools, like the RAG assistant I built for Sereno.</p><p class="incl" data-i18n="sv6i">RAG chat assistants · workflow automation · LLM integrations · data pipelines</p></div>
+          <div class="svc"><span class="no">08</span><h3 data-i18n="sv4h">E-commerce stores</h3><p data-i18n="sv4p">Online shops ready to sell from day one: catalogue, checkout, payments, shipping, and the pixels and tracking set up correctly.</p><p class="incl" data-i18n="sv4i">Store setup · payment gateways · product catalogue · Meta Pixel and Google tracking</p></div>
+          <div class="svc"><span class="no">09</span><h3 data-i18n="sv5h">Systems and full&#8209;stack software</h3><p data-i18n="sv5p">Custom web apps, dashboards and internal systems, from database to interface, built around how your team actually works.</p><p class="incl" data-i18n="sv5i">Web apps · admin dashboards · CRMs and internal tools · APIs and integrations</p></div>
+          <div class="svc"><span class="no">10</span><h3 data-i18n="sv6h">AI systems</h3><p data-i18n="sv6p">Also an ML engineer: chat assistants trained on your own content, automations and AI features in your existing tools, like the RAG assistant I built for Sereno.</p><p class="incl" data-i18n="sv6i">RAG chat assistants · workflow automation · LLM integrations · Python data tools</p></div>
         </div>
+      </div>
+      <div class="tools" aria-label="Tools">
+        <span class="chip">Meta Ads Manager</span><span class="chip">Meta Business Suite</span><span class="chip">Google Ads</span><span class="chip">Snapchat Ads</span><span class="chip">TikTok Ads</span><span class="chip">Meta Pixel</span><span class="chip">A/B testing</span><span class="chip">Python</span><span class="chip">RAG / LLMs</span>
       </div>
       <div class="svc-cta">
         <a class="btn primary" href="https://wa.me/201062792254" target="_blank" rel="noopener" data-i18n="sv_cta">Start a project on WhatsApp</a>
         <p data-i18n="sv_note">Tell me what you need and I'll reply with a plan and a quote.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 data-i18n="s_h">What I bring</h2>
-        <p data-i18n="s_p">A marketer who can read a dashboard, write the caption and build the tool.</p>
-      </div>
-      <div class="skills">
-        <div class="skill"><h3 data-i18n="s1h">Performance marketing</h3><p data-i18n="s1p">Campaign planning and media buying on Meta, Google Search and Shopping, Snapchat and TikTok, with budget moved to what converts.</p></div>
-        <div class="skill"><h3 data-i18n="s2h">Lead generation</h3><p data-i18n="s2p">Lead forms, messaging campaigns, retargeting and customer-data audiences, judged by lead quality, not cost per click alone.</p></div>
-        <div class="skill"><h3 data-i18n="s3h">Tracking and funnels</h3><p data-i18n="s3p">Audits of pixels, ad accounts, forms and conversion paths, so the numbers can be trusted before they are scaled.</p></div>
-        <div class="skill"><h3 data-i18n="s4h">Content and creative direction</h3><p data-i18n="s4p">Content ideas, visual briefs and copy in Arabic and English, written in Egyptian, Saudi and Gulf dialects.</p></div>
-        <div class="skill"><h3 data-i18n="s5h">Testing and reporting</h3><p data-i18n="s5p">A/B tests on messages and designs, and client reports that end with clear next steps.</p></div>
-        <div class="skill"><h3 data-i18n="s6h">AI and automation</h3><p data-i18n="s6p">Also an ML engineer: I built a RAG chat assistant for Sereno and publish Python packages for data work.</p></div>
-      </div>
-      <div class="tools" aria-label="Tools">
-        <span class="chip">Meta Ads Manager</span><span class="chip">Meta Business Suite</span><span class="chip">Google Ads</span><span class="chip">Snapchat Ads</span><span class="chip">TikTok Ads</span><span class="chip">Meta Pixel</span><span class="chip">A/B testing</span><span class="chip">Python</span><span class="chip">RAG / LLMs</span>
       </div>
     </div>
   </section>
@@ -544,7 +530,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:14px;display:flex;ju
 
 <script>
 const AR={
-brand:"فارس أشرف",nav1:"النتائج",nav2:"الأعمال",nav3:"الريلز",nav4:"المهارات",nav5:"تواصل",nav6:"الخدمات",
+brand:"فارس أشرف",nav1:"النتائج",nav2:"الأعمال",nav3:"الريلز",nav5:"تواصل",nav6:"الخدمات",
 eyebrow:"تسويق · إبداع · برمجة · القاهرة",name:'فارس <span>أشرف</span>',
 role:"تسويق أداء، وإنتاج محتوى إبداعي، والمتاجر والبرمجيات اللي وراه، لعلامات تجارية في مصر والخليج وأوروبا.",
 thesis:"بحوّل ميزانية الإعلانات لمحادثات مع مشترين حقيقيين، وبقيس كل خطوة بعقلية المهندس.",
@@ -594,22 +580,20 @@ c5d3:"ربطت دورات سكيلد سنتر بفايدة عملية بالعر
 c5d5:"عملت عروض رمضان لحلويات سوار الشام، وفيديوهات مغامرات لميرا وميلا.",
 c5x1:"Lead في 6 أيام بـ 7.94 دولار",c5x2:"إعجاب بالصفحة بـ 0.11 دولار",c5x3:"تفاعل بـ 59.05 دولار",
 v_h:"ريلز الأعمال",v_p:"فيديوهات رأسية قصيرة، بصوتي. اضغط على أي واحد يشتغل.",v_ar:"دراسة حالة · عربي",v7:"ريل تسويقي<small>إنجليزي · 53 ثانية</small>",
-sv_h:"الخدمات",sv_p:"غير إدارة الحملات، بعمل المحتوى الإبداعي اللي بيدخل فيها، وببني المتجر أو السيستم اللي وراها.",
+sv_h:"الخدمات",sv_p:"شخص واحد من الاستراتيجية للتنفيذ: بدير الحملات، وبعمل المحتوى الإبداعي اللي بيدخل فيها، وببني المتجر أو السيستم اللي وراها.",
+sv_g0:"التسويق",
+sv7h:"تسويق الأداء",sv7p:"تخطيط الحملات وشراء الإعلانات، ونقل الميزانية للي بيحوّل.",sv7i:"ميتا · جوجل سيرش وشوبينج · سناب شات · تيك توك",
+sv8h:"توليد العملاء",sv8p:"حملات بتتقاس بجودة العميل، مش تكلفة النقرة بس.",sv8i:"نماذج العملاء · حملات الرسائل · إعادة الاستهداف · جماهير من بيانات العملاء",
+sv9h:"التتبّع والاختبار والتقارير",sv9p:"أرقام تقدر تثق فيها قبل ما تكبّر، واختبارات بتوضّح إيه اللي شغّال، وتقارير بتنتهي بخطوات واضحة.",sv9i:"مراجعة البكسل والحسابات الإعلانية · مسارات التحويل · اختبارات A/B · تقارير للعملاء",
+sv10h:"المحتوى والتوجيه الإبداعي",sv10p:"أفكار المحتوى، والـ Visual Brief، والكتابة بالعربي والإنجليزي.",sv10i:"خطط محتوى · Visual Briefs · كتابة كابشن · لهجة مصرية وسعودية وخليجية",
 sv_g1:"استوديو إبداعي",sv_g2:"برمجة وتطوير",
 sv1h:"تصميم جرافيك",sv1p:"بوستات سوشيال، وتصميمات إعلانات، وفيجوالز حملات، وهوية بصرية، متصممة للمنصة والسوق اللي هتتنشر فيه.",sv1i:"بوستات وستوريز · مجموعات إعلانات · كاروسيل · براند كيت",
 sv2h:"موشن جرافيك وفيديو",sv2p:"إعلانات متحركة، وفيديوهات شرح للمنتج، وريلز قصيرة بتوقّف السكرول وبتوصّل الرسالة في أول ثواني.",sv2i:"ريلز وتيك توك · إعلانات متحركة · فيديوهات شرح · تحريك اللوجو",
 sv3h:"تصوير لايف ستايل",sv3p:"صور لمنتجك في أماكن حقيقية مع ناس حقيقيين، علشان المشتري يتخيّله في حياته.",sv3i:"المنتج وهو بيتستخدم · تصوير في اللوكيشن · ريتاتش · مقاسات جاهزة للسوشيال",
 sv4h:"متاجر إلكترونية",sv4p:"متاجر أونلاين جاهزة تبيع من أول يوم: كتالوج، ودفع، وشحن، والبكسل والتتبّع متظبطين صح.",sv4i:"إعداد المتجر · بوابات الدفع · كتالوج المنتجات · Meta Pixel وتتبّع جوجل",
 sv5h:"أنظمة وبرمجيات Full-Stack",sv5p:"تطبيقات ويب، وداشبوردات، وأنظمة داخلية مخصوصة، من قاعدة البيانات للواجهة، مبنية على طريقة شغل فريقك.",sv5i:"تطبيقات ويب · لوحات تحكم · CRM وأدوات داخلية · APIs وربط أنظمة",
-sv6h:"أنظمة ذكاء اصطناعي",sv6p:"مساعدين محادثة متدرّبين على محتواك، وأتمتة، ومميزات ذكاء اصطناعي جوّه أدواتك الحالية، زي مساعد RAG اللي بنيته لسيرينو.",sv6i:"مساعدين محادثة RAG · أتمتة سير العمل · ربط نماذج اللغة · خطوط بيانات",
+sv6h:"أنظمة ذكاء اصطناعي",sv6p:"أنا كمان مهندس تعلّم آلي: مساعدين محادثة متدرّبين على محتواك، وأتمتة، ومميزات ذكاء اصطناعي جوّه أدواتك الحالية، زي مساعد RAG اللي بنيته لسيرينو.",sv6i:"مساعدين محادثة RAG · أتمتة سير العمل · ربط نماذج اللغة · أدوات بيانات بـ Python",
 sv_cta:"ابدأ مشروعك على واتساب",sv_note:"قولّي محتاج إيه، وهرد عليك بخطة وعرض سعر.",
-s_h:"اللي بقدّمه",s_p:"مسوّق بيقرا الداشبورد، ويكتب الكابشن، ويبني الأداة.",
-s1h:"تسويق الأداء",s1p:"تخطيط الحملات وشراء الإعلانات على ميتا، وجوجل سيرش وشوبينج، وسناب شات، وتيك توك، ونقل الميزانية للي بيحوّل.",
-s2h:"توليد العملاء",s2p:"نماذج العملاء، وحملات الرسائل، وإعادة الاستهداف، وجماهير من بيانات العملاء، والحكم بجودة العميل مش تكلفة النقرة بس.",
-s3h:"التتبّع ومسارات التحويل",s3p:"مراجعة البكسل والحسابات والنماذج ومسارات التحويل، علشان نثق في الأرقام قبل ما نكبّر.",
-s4h:"المحتوى والتوجيه الإبداعي",s4p:"أفكار المحتوى، والـ Visual Brief، والكتابة بالعربي والإنجليزي، باللهجة المصرية والسعودية والخليجية.",
-s5h:"الاختبار والتقارير",s5p:"اختبارات A/B على الرسائل والتصميمات، وتقارير للعملاء بتنتهي بخطوات واضحة.",
-s6h:"الذكاء الاصطناعي والأتمتة",s6p:"أنا كمان مهندس تعلّم آلي: بنيت مساعد محادثة RAG لسيرينو، وبنشر مكتبات Python لتحليل البيانات.",
 x_h:"الخبرة",x1:"مدير التسويق الرقمي · مصر",x2:"أخصائي أول في التسويق الرقمي · الإمارات",x3:"مدير التسويق الرقمي · السعودية",x4:"أخصائي سوشيال ميديا إقليمي · الخليج",
 x5:"أخصائي تسويق سوشيال ميديا · ألمانيا، عن بُعد",x6b:"جامعة الإسكندرية",x6:"بكالوريوس الهندسة الميكانيكية",
 ct_h:"يلا نكبّر البراند بتاعك.",ct_p:"متاح لوظائف دوام كامل ومشاريع فريلانس في التسويق والتصميم والفيديو والتصوير والمتاجر الإلكترونية والبرمجة.",ct_k:"البورتفوليو",ct_e:"الإيميل",ct_w:"الموبايل والواتساب",ct_wa:"كلّمني على واتساب",copy:"نسخ",
