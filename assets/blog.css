@@ -85,6 +85,10 @@ article strong{font-weight:700}
 .tbl.text td{direction:inherit;text-align:start;font-variant-numeric:normal}
 .tbl.text table{font-size:15px}
 .sources{font-size:15.5px}
+.author{margin-top:40px;padding:20px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);font-size:16px;line-height:1.8}
+.author b{display:block;font-size:17px}
+.author p{margin-top:6px;color:var(--muted)}
+.nowrap{white-space:nowrap}
 .sources a{word-break:break-word}
 .check{list-style:none;padding:0!important}
 .check li{position:relative;padding-inline-start:30px}

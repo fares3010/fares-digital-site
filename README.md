@@ -10,8 +10,11 @@ ar/blog/            Arabic blog: index.html lists the posts, each post is ar/blo
 assets/blog.css     styles for the blog pages
 tools/ar.json       all Arabic text, keyed to the data-i18n="..." attributes in index.html
 tools/build.py      rebuilds ar/index.html and en/index.html
+tools/indexnow.py   tells Bing (and so ChatGPT search and Copilot) about changed pages
 404.html            "page not found" page
 robots.txt          lets search engines index the site
+llms.txt            plain-text summary of who Fares is and the main pages, for AI assistants
+<key>.txt           IndexNow key file (the long hex name); keep it at the root
 sitemap.xml         sitemap with the English and Arabic pages linked as translations
 assets/
   favicon.svg       browser-tab icon
@@ -54,11 +57,14 @@ After the domain is connected, turn on HTTPS. Netlify, Vercel, Cloudflare and Gi
 1. Copy `ar/blog/messages-without-sales/` to a new folder named after the post in English (e.g. `ar/blog/ad-costs-egypt/`).
 2. In the copy, change the title, description, canonical and `og:url` links, the dates, the structured data and the article text.
 3. Add a card for it at the top of the list in `ar/blog/index.html`, and add it to `blogPost` in that page's structured data.
-4. Add its address to `sitemap.xml`.
+4. Add its address to `sitemap.xml` and to the Blog list in `llms.txt`.
+5. After it is live, run `python3 tools/indexnow.py <post URL>`.
 
 ## Search engines
 - The English page is `/` (also reachable at `/en/`, which points search engines back to `/`) and the Arabic page is `/ar/`. Each one names the other with `hreflang`, so Google shows Arabic searchers the Arabic page.
 - Structured data (`application/ld+json` in the `<head>`) describes you, your services and the countries you serve. Check it at https://search.google.com/test/rich-results.
 - Submit `https://fares.digital/sitemap.xml` in Google Search Console and Bing Webmaster Tools after each big change.
+- After publishing, run `python3 tools/indexnow.py` so Bing re-crawls straight away. Bing's index feeds ChatGPT search and Copilot.
+- `llms.txt` and the "about" paragraph in the footer (key `about`) are written so AI assistants can quote clear facts. Keep them in step with the site, and add new blog posts to `llms.txt`.
 - To replace a video, keep the same file name in `assets/video/`, or update the `src` and `poster` in the Showreel or Reels section.
 - Fonts load from Google Fonts. Everything else is self-hosted.
