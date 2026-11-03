@@ -329,10 +329,17 @@ html[lang="ar"] .body h4{font-family:var(--body);letter-spacing:0;font-size:14px
 .res>span{background:var(--chip);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .res strong{font-family:var(--display);font-weight:800;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
 .res strong+span{font-size:14px;line-height:1.35;color:var(--muted)}
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
-.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.gallery figure.wide{grid-column:1/-1}
-.gallery img{display:block;width:100%;height:auto}
+.gallery{display:flex;flex-direction:column;gap:14px}
+.gallery figure{position:relative;margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery img{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain;background:#fff;cursor:zoom-in;transition:opacity .2s}
+.gallery img:hover{opacity:.92}
+.gallery img:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.gallery figure::after{content:"";position:absolute;top:10px;inset-inline-end:10px;width:32px;height:32px;border-radius:50%;pointer-events:none;background:rgba(0,0,0,.6) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center/16px no-repeat}
+.lb{border:0;padding:0;margin:auto;max-width:96vw;max-height:94vh;background:transparent;color:#fff;overflow:visible}
+.lb::backdrop{background:rgba(0,0,0,.88)}
+.lb img{display:block;max-width:96vw;max-height:84vh;width:auto;height:auto;border-radius:10px;background:#fff;margin:0 auto}
+.lb p{margin:10px 0 0;text-align:center;font-family:var(--mono);font-size:13px;color:#ddd}
+.lb button{position:fixed;top:14px;inset-inline-end:14px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.6);color:#fff;font-size:24px;line-height:1;cursor:pointer}
 .gallery figcaption{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
 html[lang="ar"] .gallery figcaption{font-family:var(--body);font-size:12.5px}
 .reelbtn{margin-top:22px}
@@ -733,7 +740,19 @@ html[lang="ar"] .contact .card .k{font-family:var(--body);letter-spacing:0;font-
   <a href="blog/">المدونة</a>
 </footer>
 
+<dialog class="lb" id="lb"><button type="button" id="lbx" aria-label="Close">×</button><img id="lbi" alt=""><p id="lbc"></p></dialog>
 <script>
+// Tap a case-study screenshot to see it full size.
+(()=>{const lb=document.getElementById('lb'),li=document.getElementById('lbi'),lc=document.getElementById('lbc'),lx=document.getElementById('lbx');
+  if(document.documentElement.lang==='ar')lx.setAttribute('aria-label','إغلاق');
+  const open=img=>{li.src=img.currentSrc||img.src;li.alt=img.alt;const c=img.closest('figure').querySelector('figcaption');lc.textContent=c?c.textContent:'';lb.showModal?lb.showModal():lb.setAttribute('open','')};
+  const close=()=>{lb.close?lb.close():lb.removeAttribute('open')};
+  document.querySelectorAll('.gallery img').forEach(img=>{img.tabIndex=0;img.setAttribute('role','button');
+    img.addEventListener('click',()=>open(img));
+    img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img)}})});
+  lx.addEventListener('click',close);
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target===li)close()});
+})();
 document.querySelectorAll('.reelbtn').forEach(a=>a.addEventListener('click',()=>{const v=document.querySelector(a.getAttribute('href')+' video'); if(v){setTimeout(()=>{v.play().catch(()=>{})},500)}}));
 // Only one video plays at a time.
 const vids=[...document.querySelectorAll('video')];
